@@ -28,13 +28,13 @@ def go_out(x):
         print('\n\n\t\t\tGOODBYE \n')
         sys.exit(0)
 
-def clearscreen():   
+def clearscreen():
     try:
-        os.system("cls") 
+        os.system("cls")
     except SyntaxError:
-        os.system("clear") 
-        
-        
+        os.system("clear")
+
+
 def bring_list(k,df,cols):
     listas = []
     listas.append(glist(df,k+1,cols[k+0]))
@@ -59,6 +59,15 @@ def abro(list_of_path,cities):
     df = editdf(df)
     return df
 
+def contador(number):
+    """
+    this function is to create a generator
+    to iterate from 0 to number - 1
+    """
+    k = 0
+    while n < max:
+        yield n
+        n += 1
 
 def editdf(df):
 
@@ -73,7 +82,8 @@ def editdf(df):
     day_of_week_number = df['Day of Week (number)'].unique()
     day_of_week_number.sort()
     lista_w = []
-    for i in range(7):
+    mycont = contador(7)
+    for i in mycont:
         if i < 5:
             lista_w.append('Weekdays')
         else:
@@ -146,7 +156,7 @@ def prints(intexto):
 
 def reduc(inputtext,length = None):
     """
-    
+
 
     Parameters
     ----------
@@ -168,7 +178,7 @@ def glist(df,k,col):
     returns a list for k=0 (time headers)
     or k=3 (user headers)
     col are the headers
-    df is the dataframe for 
+    df is the dataframe for
 
     Parameters
     ----------
@@ -182,7 +192,7 @@ def glist(df,k,col):
     a list of unique items included in the selected headers
 
     """
-    
+
     lista = df[col].unique()
     if k == 1:
         lista.sort()
@@ -210,7 +220,7 @@ def to_minutes_and_seconds (secs):
     """
     Change secs into a string of years, weeks, days....
     Depending on its size
-    
+
     Parameters
     ----------
     secs : integer
