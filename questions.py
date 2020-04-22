@@ -14,8 +14,6 @@ class Filtering:
         self.e = lista_encabezados
         self.t = texto
 
-
-
 def start_questions():
     print(sep + '\n\n\tType 0 always you want to exit. \n' + sep)
     sqtext = '\n\t 1. Cities\n\t 2. Time\n\t 3. Users'
@@ -57,10 +55,9 @@ def getcity(cities_list):
     return  cit_c
 
 def temp_bucle(a,b,text):
-    c = a
-    while c not in [i for i in range(b+1) if i>0]:
-        c = uf.error_handle(error_text + text + type_the_no)
-    return c
+    while a not in [i for i in range(b+1) if i>0]:
+        a = uf.error_handle(error_text + text + type_the_no)
+    return a
 
 def cbucle(lista):
     tex = ''
@@ -142,7 +139,7 @@ def restart(df):
     while z not in ['0','y','n']:
         z = input(error_text + zt1)
     if z == '0' or z == 'n':
-        
+
         uf.go_out(0)
     else:
         a = True
