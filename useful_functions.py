@@ -64,8 +64,8 @@ def contador(number):
     this function is to create a generator
     to iterate from 0 to number - 1
     """
-    k = 0
-    while n < max:
+    n = 0
+    while n < number:
         yield n
         n += 1
 
