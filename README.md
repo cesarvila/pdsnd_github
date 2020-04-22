@@ -5,7 +5,9 @@
 Bikeshare Project
 
 ### Description
-Describe what your project is about and what it does
+This project will give you a ton of interesting stats for
+the US bikeshare company data. You can decide which stats
+evaluate, it is awesome!
 
 ### Files used
 Include the files used
