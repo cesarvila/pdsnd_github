@@ -1,14 +1,16 @@
-
+#This is the script for the bikeshare project
 #let's import some libs
 import glob
 import os
 import time
+#below are included the supporting scripts with their Aliases
 import questions as q
 import useful_functions as uf
 import stat_script as sta
 #now import my own scripts
 #from useful_functions import sele
 #from useful_functions import sel
+
 def main(a = False, df = 'None'):
     tgtime = '\n\nWhich term do you want to include in your stats?\n'
     t1 = '\nWhich month?\n'
@@ -34,7 +36,7 @@ def main(a = False, df = 'None'):
         cities_list.append(csv)
     path_cities = [os.path.join(current_dir, csvS[0]),
      os.path.join(current_dir, csvS[1]), os.path.join(current_dir, csvS[2])]
-    
+
     f1 = '\n' + ' | '*20
     f1 += '\n' + ' | '*20
     f1 += '\n' + ' V '*20
