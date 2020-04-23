@@ -1,4 +1,4 @@
-#let's import some libs
+#this script is used for asking questions
 
 import useful_functions as uf
 import bikeshare as bs
