@@ -1,4 +1,4 @@
-#let's import some libs
+#this script is used for asking questions
 
 import useful_functions as uf
 import bikeshare as bs
@@ -142,7 +142,7 @@ def restart(df):
     while z not in ['0','y','n']:
         z = input(error_text + zt1)
     if z == '0' or z == 'n':
-        
+
         uf.go_out(0)
     else:
         a = True
